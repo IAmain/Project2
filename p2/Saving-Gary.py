@@ -10,6 +10,8 @@ eula = Tk()                             # Create eula Tkinter window
 
 # Fawziyah
 def RunGame(difficulty):                # Define a function to run the game based on selected difficulty
+    """This function runs the game"""
+    
     if difficulty == "Beginner":        # Set parameters for Beginner difficulty
         factor = 1
         enemy_speed = 0.85
@@ -33,28 +35,35 @@ def RunGame(difficulty):                # Define a function to run the game base
 
     class Delay:                                # Define a class for introducing delays
         def __init__(self):
+            """This function initializes the instance of delay"""
             self.StartTime = time.time()
 
         def Wait(self, delay, func):            # Method to wait for a specified delay before executing a function
+            """This function waits for a delay before executing a function"""
             if time.time() >= self.StartTime + delay:
                 func()
                 self.StartTime = time.time()
 
     class MatchTimer:                           # Define a class for managing game time
         def __init__(self):
+            """This function initializes an instance of the timer"""
             self.StartTime = time.time()
 
         def GetTime(self):                      # Method to get current game time
+            """This function returns the time"""
             return time.time() - self.StartTime
 
         def EndMatch(self):                     # Method to end the game and record time
+            """This function returns the time at the end of the game"""
             self.EndTime = self.GetTime()
 
         def GetNetTime(self):                   # Method to get total game time
+            """This function returns the total time"""
             return self.EndTime
 
         # Shuhena
         def GameOver(self):
+            """This function shows the game over screen"""
             #Here is a Game Over frame that shows up on the screen using Tkinter. Once the player lose all their lives the pop up comes up.
             #Once the Game over pop up comes up, it allows the user to quit/exit the game.
             Game_Over_Screen = Frame()
@@ -80,6 +89,7 @@ def RunGame(difficulty):                # Define a function to run the game base
     #star_speed = 3                                 # Initialize score
     # Fawziyah
     def create_enemy():                         # Function to create an enemy turtle
+        """This function creates enemies"""
         # Create and customize the enemy turtle
         enemy = turtle.Turtle()
         enemy.ht()
@@ -92,6 +102,7 @@ def RunGame(difficulty):                # Define a function to run the game base
         enemies.append(enemy)                   # Add the enemy turtle to the list
     # Fawziyah
     def create_star():                          # Function to create a star turtle
+        """This function creates the stars"""
         # Create and customize the star turtle
         star = turtle.Turtle()
         star.ht()
@@ -104,9 +115,11 @@ def RunGame(difficulty):                # Define a function to run the game base
         stars.append(star)                      # Add the star turtle to the list
     # Fawziyah
     def check_collision(obj1, obj2):           # Function to check collision between two objects
+        """This function checks for a collision with a larger distance"""
         return obj1.distance(obj2) < 50        # Return True if collision occurs, False otherwise
     # Fawziyah
     def check_collision2(obj1, obj2):          # Function to check collision with a smaller distance
+        """This function checks for a collision with a smaller distance"""
         return obj1.distance(obj2) < 20        # Return True if collision occurs, False otherwise
 
     win = turtle.Screen()                      # Create a turtle window
@@ -136,10 +149,12 @@ def RunGame(difficulty):                # Define a function to run the game base
     # Functions to move the turtle left and right
     # Fawziyah
     def on_left():
+        """This function moves the player left"""
         if gary.xcor() > -200:
             gary.setx(gary.xcor() - 100)
 
     def on_right():
+        """This function moves the player right"""
         if gary.xcor() < 200:
             gary.setx(gary.xcor() + 100)
 
