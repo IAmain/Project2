@@ -1,0 +1,14 @@
+Welcome to Saving Gary!
+
+Little Gary was walking along the shore when he accidentally spilled all his gold-star stickers!
+Gary wants to collect as many of them back as possible, but there's just one problem...
+There are sharks all over, and Gary's just a small turtle!
+Help Gary swim as far as he can, collecting his star stickers along the way, and avoid the sharks!
+
+Directions:
+-Movement: Use the left and right arrow keys to move
+-Objective: Collect stars and avoid sharks!
+-You have three lives - each time you hit a shark, one life will be lost.
+-Your score increments automatically depending on how long you've kept Gary alive
+-Each star you collect will add 10 points to your score!
+-Be careful not to get hit three times or else it's Game Over!
