@@ -1,0 +1,29 @@
+Forestview's End User License Agreement ("EULA")
+
+Please read this agreement carefully and in its entirety before using this application. By using this application, you 
+agree to the following terms:
+
+Privacy Policy
+-Forestview collects and stores data in a way that keeps all data entered by users confidential. Forestview conducts routine 
+vulverability assessment procedures to ensure that its security is as flawless as possible and demands that all vendors do the same.
+While our users' privacy and safety are of utmost importance to us, Forestview is not responsible for any lost or stolen data.
+
+Indemnity Clause
+-You agree to indemnify, defend, and hold harmless Forestview against any liability, damage, loss, or 
+expense (including reasonable attorneys fees and expenses of litigation) incurred by or imposed upon the use
+of this Forestview application in any way. You also preclude Forestview from legal ramifications for 
+things such as data breaches, zero-day attacks, and database worms, such as SQL injection.
+
+Usage Restrictions:
+-Users are forbidden from buying, selling, or exchanging any data without the consent of Forestview.
+
+Application Sharing:
+-Users are forbidden from copying, reproducing, or redistributing this application or any pieces derived
+from this application 
+
+Changes to this EULA:
+-This EULA is a live document and is subject to change. It is your responsibility to routinely check for updates.
+
+Acknowledgement:
+-By using this application, you agree to all of these terms. If a breach in these terms is found, legal action
+will be taken.
