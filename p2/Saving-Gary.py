@@ -211,15 +211,22 @@ def RunGame(difficulty):                # Define a function to run the game base
                 enemies.remove(enemy)
                 enemy.ht()
                 # Shuhena
-                print("Lives:", remaining_lives)
                 #Once a player hits a dangerous object the lives decrease by one each time.
                 remaining_lives = remaining_lives - 1
                 print("Lives Remaining:", remaining_lives)
                 print("You got hit with an object, you lost a life!")
+                print("Current score: ", int(timer.GetTime()) + score)
+
 
             if remaining_lives == 0:
                 run = False
                 print("Game Over!")
+                # Compare the score with the high score and update it if necessary
+                if timer.GetNetTime() + score > high_score:
+                    high_score = int(timer.GetNetTime()) + score
+                    with open('highscore.txt', 'w') as f:
+                        f.write(str(high_score))
+                print("Your score: ",int(timer.GetNetTime()) + score)
                 timer.EndMatch()
                 timer.GameOver()
 
@@ -246,14 +253,6 @@ def RunGame(difficulty):                # Define a function to run the game base
         pen.write(f'Score: {int(timer.GetTime()) + score} \nHigh Score: {high_score} \nRemaining Lives: {remaining_lives} ', font=("Calibri", 12, "bold"))  # Display score, high score, and remaining lives.
         win.update()                           # Update the window
 
-    # Compare the score with the high score and update it if necessary
-    if timer.GetNetTime() + score > high_score:
-        high_score = int(timer.GetNetTime()) + score
-        with open('highscore.txt', 'w') as f:
-            f.write(str(high_score))
-
-    # Display final score and high score after game over
-    pen.write(f'Score: {int(timer.GetTime()) + score} \nHigh Score: {high_score} \n Game Over! ', font=("Calibri", 12, "bold"))
 
     win.mainloop()   # Start the Tkinter event loop
 
