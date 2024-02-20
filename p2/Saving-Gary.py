@@ -69,6 +69,12 @@ def RunGame(difficulty):                # Define a function to run the game base
             Game_Over_Screen = Frame()
             Game_Over_Screen.pack()
 
+            # Display final score and high score after game over
+            pen.goto(-215, 220)
+            pen.clear()
+            pen.color('white')
+            pen.write(f'Score: {int(timer.GetTime()) + score} \nHigh Score: {high_score} \n Game Over! ', font=("Calibri", 12, "bold"))
+
             #The Game Over will appear in this font type and size. 
             label_and_font = ('times', 40, 'bold')
                 
@@ -168,7 +174,7 @@ def RunGame(difficulty):                # Define a function to run the game base
     pen.ht()
     pen.color('white')
     pen.speed(0)
-    pen.goto(-340, 220)
+    pen.goto(-220, 220)
     pen.pensize(8)
 
     # Create the player turtle
@@ -213,9 +219,6 @@ def RunGame(difficulty):                # Define a function to run the game base
                 # Shuhena
                 #Once a player hits a dangerous object the lives decrease by one each time.
                 remaining_lives = remaining_lives - 1
-                print("Lives Remaining:", remaining_lives)
-                print("You got hit with an object, you lost a life!")
-                print("Current score: ", int(timer.GetTime()) + score)
 
 
             if remaining_lives == 0:
@@ -226,7 +229,7 @@ def RunGame(difficulty):                # Define a function to run the game base
                     high_score = int(timer.GetNetTime()) + score
                     with open('highscore.txt', 'w') as f:
                         f.write(str(high_score))
-                print("Your score: ",int(timer.GetNetTime()) + score)
+
                 timer.EndMatch()
                 timer.GameOver()
 
@@ -247,10 +250,10 @@ def RunGame(difficulty):                # Define a function to run the game base
                 star.ht()
 
         gary.goto(gary.xcor(), gary.ycor())     # Update player turtle position
-        pen.goto(pen.xcor(), pen.ycor())       # Update score display position
+        pen.goto(-220, 220)       # Update score display position
         pen.clear()                            # Clear previous score display
         pen.color('white')                     # Set color for new score display
-        pen.write(f'Score: {int(timer.GetTime()) + score} \nHigh Score: {high_score} \nRemaining Lives: {remaining_lives} ', font=("Calibri", 12, "bold"))  # Display score, high score, and remaining lives.
+        pen.write(f'Score: {int(timer.GetTime()) + score} \nHigh Score: {high_score} \nRemaining Lives: {remaining_lives} ',align="left", font=("Calibri", 12, "bold"))  # Display score, high score, and remaining lives.
         win.update()                           # Update the window
 
 
