@@ -352,4 +352,6 @@ def main():
     else:
         on_yes()    
 
-main()  # Run the main function
+# Run the main function
+if __name__ == "__main__":
+    main()
